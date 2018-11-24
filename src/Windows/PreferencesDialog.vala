@@ -138,7 +138,7 @@ namespace Tomato.Window {
             close_button.clicked.connect (() => { this.destroy (); });
 
             //button box
-            var button_box = new Gtk.HButtonBox ();
+            var button_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
             button_box.set_layout (Gtk.ButtonBoxStyle.END);
             button_box.pack_end (close_button);
             button_box.margin_end = 12;
