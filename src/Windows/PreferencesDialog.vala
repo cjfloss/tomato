@@ -141,7 +141,7 @@ namespace Tomato.Window {
             var button_box = new Gtk.HButtonBox ();
             button_box.set_layout (Gtk.ButtonBoxStyle.END);
             button_box.pack_end (close_button);
-            button_box.margin_right = 12;
+            button_box.margin_end = 12;
 
             //puts everything into a grid
             var main_grid = new Gtk.Grid ();
@@ -272,7 +272,7 @@ namespace Tomato.Window {
             label.hexpand = true;
             label.halign = Gtk.Align.END;
             if (switcher is Gtk.Scale || switcher is Widget.ValueRange) label.valign = Gtk.Align.END;
-            label.margin_left = 20;
+            label.margin_start = 20;
             label.margin_top = margin_top;
             switcher.margin_top = margin_top;
             switcher.hexpand = true;
@@ -294,8 +294,8 @@ namespace Tomato.Window {
             var grid = new Gtk.Grid ();
             grid.row_spacing = 5;
             grid.column_spacing = 5;
-            grid.margin_left = 12;
-            grid.margin_right = 12;
+            grid.margin_start = 12;
+            grid.margin_end = 12;
             grid.margin_top = 12;
             grid.margin_bottom = 12;
             return grid;
