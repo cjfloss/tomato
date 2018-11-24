@@ -65,7 +65,7 @@ namespace Tomato {
 
         //constructor
         public TomatoApp () {
-            Object (application_id: "com.github.tomatoers.tomato");
+            Object (application_id: Constants.EXEC_NAME);
 
             //logger initialization
             Logger.initialize (Constants.APP_NAME);
