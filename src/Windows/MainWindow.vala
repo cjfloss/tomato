@@ -215,7 +215,7 @@ namespace Tomato.Window {
                 Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
                     provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
             } catch (Error e) {
-                stderr.printf ("Error: %s", e.message);
+                critical ("Error: %s", e.message);
             }
 
             /* Setting elements styles */
