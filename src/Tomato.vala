@@ -52,30 +52,7 @@ namespace Tomato {
 
     //protected const bool DEBUG = true;
 
-    public class TomatoApp : Granite.Application {
-
-        construct {
-            program_name = Constants.APP_NAME;
-            exec_name = Constants.EXEC_NAME;
-            build_version = Constants.VERSION;
-
-            app_years = "2017";
-            app_icon = Constants.ICON_NAME;
-            app_launcher = "com.github.tomatoers.tomato.desktop";
-            application_id = "com.github.tomatoers.tomato";
-
-            main_url = "https://github.com/tomatoers/tomato";
-            bug_url = "https://github.com/tomatoers/tomato/issues";
-            help_url = "https://github.com/tomatoers/tomato";
-            translate_url = "https://www.transifex.com/tomato-translators/tomato/translate/";
-
-            about_authors = {"Luiz Augusto Morais <luizaugustomm@gmail.com>",
-                             "Sam Thomas <sgpthomas@gmail.com>"};
-            about_license_type = Gtk.License.GPL_3_0;
-            about_artists = {"Luiz Augusto Morais <luizaugustomm@gmail.com>",
-                             "Sam Thomas <sgpthomas@gmail.com>"};
-            about_translators = "Launchpad Translators";
-        }
+    public class TomatoApp : Gtk.Application {
 
         public signal void paused_on_break ();
 
@@ -88,6 +65,8 @@ namespace Tomato {
 
         //constructor
         public TomatoApp () {
+            Object (application_id: "com.github.tomatoers.tomato");
+
             //logger initialization
             Logger.initialize (Constants.APP_NAME);
             Logger.DisplayLevel = LogLevel.DEBUG;
